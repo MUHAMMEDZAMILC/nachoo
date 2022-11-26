@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:nachoo/common/colors.dart';
 import 'package:nachoo/home/homepage.dart';
 
  void main() async {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Nachoo',
       theme: ThemeData(
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(backgroundColor: Colors.black),
+        bottomNavigationBarTheme:  BottomNavigationBarThemeData(backgroundColor: whitecolor),
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.deepPurple
         ),

@@ -27,6 +27,11 @@ class _UncheckedTaskState extends State<UncheckedTask> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0.0,
+        title: Text('Task',style: appbar,),
+        backgroundColor: Color(0xFF061A24),
+      ),
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -121,7 +126,7 @@ class _UncheckedTaskState extends State<UncheckedTask> {
                         itemCount:snapshot.data!.docs.length,
                         itemBuilder: (context,  index) {
                           return Card(
-                            color: Color.fromARGB(208, 3, 76, 91),
+                            color: Color(0xFFFFFFFF),
                               child: ListTile(
                                 subtitle: Text(snapshot.data!.docs[index]['tasks'],style: content,),
                             trailing: Container(
@@ -141,18 +146,7 @@ class _UncheckedTaskState extends State<UncheckedTask> {
                                       size: 35,
                                     ),
                                   ),
-                                  InkWell(
-                                    onTap: (){
-                                       FirebaseFirestore.instance.collection('tasks').doc(snapshot.data!.docs[index]['taskid']).update({
-                                        'status' : 2,
-                                      });
-                                    },
-                                    child: Icon(
-                                      Icons.check_box,
-                                      color: Colors.green,
-                                      size: 35,
-                                    ),
-                                  ),
+                                  
                                 ],
                               ),
                             ),
