@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:nachoo/common/textstyle.dart';
-import 'package:nachoo/taskslist/bedroomlight.dart';
+import 'package:nachoo/taskslist/bedroom/bedroomlight.dart';
 import 'package:nachoo/taskslist/profilrpage.dart';
 import 'package:nachoo/taskslist/uncheckedtask.dart';
 
